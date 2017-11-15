@@ -31,27 +31,27 @@ public class Laptop {
 		this.lName = lName;
 	}
 	
-	@ManyToOne
-	private Student student;
-
-	public Student getStudent() {
-		return student;
-	}
-
-	public void setStudent(Student student) {
-		this.student = student;
-	}
-	
-//	@ManyToMany
-//	private List<Student> student=new ArrayList<Student>();
+//	@ManyToOne
+//	private Student student;
 //
-//	public List<Student> getStudent() {
+//	public Student getStudent() {
 //		return student;
 //	}
 //
-//	public void setStudent(List<Student> student) {
+//	public void setStudent(Student student) {
 //		this.student = student;
 //	}
+	
+	@ManyToMany(mappedBy="laptop")
+	private List<Student> student=new ArrayList<Student>();
+
+	public List<Student> getStudent() {
+		return student;
+	}
+
+	public void setStudent(List<Student> student) {
+		this.student = student;
+	}
 	
 	
 }

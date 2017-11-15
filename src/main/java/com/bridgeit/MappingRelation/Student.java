@@ -45,19 +45,10 @@ public class Student {
 //		this.laptop = laptop;
 //	}
 
-	@OneToMany(mappedBy="student")
-	private List<Laptop> laptop=new ArrayList<Laptop>();
+	
 
-
-	public List<Laptop> getLaptop() {
-		return laptop;
-	}
-
-	public void setLaptop(List<Laptop> laptop) {
-		this.laptop = laptop;
-	}
-
-//	@ManyToMany
+//	@OneToMany
+//	@OneToMany(mappedBy="student")
 //	private List<Laptop> laptop=new ArrayList<Laptop>();
 //
 //
@@ -68,6 +59,18 @@ public class Student {
 //	public void setLaptop(List<Laptop> laptop) {
 //		this.laptop = laptop;
 //	}
+
+	@ManyToMany()
+	private List<Laptop> laptop=new ArrayList<Laptop>();
+
+
+	public List<Laptop> getLaptop() {
+		return laptop;
+	}
+
+	public void setLaptop(List<Laptop> laptop) {
+		this.laptop = laptop;
+	}
 
 	
 }

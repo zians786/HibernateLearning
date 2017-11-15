@@ -36,16 +36,7 @@ public class App {
 //		student.getLaptop().add(laptop);
 		
 		
-		Student student=new Student();   //Many to One
-		Laptop laptop=new Laptop();
-		student.setsId(1);
-		student.setsName("faisal");
-
-		laptop.setlId(101);
-		laptop.setlName("Dell");
-		student.getLaptop().add(laptop);
-		
-//		Student student=new Student();   //Many to Many
+//		Student student=new Student();   //Many to One
 //		Laptop laptop=new Laptop();
 //		student.setsId(1);
 //		student.setsName("faisal");
@@ -53,6 +44,17 @@ public class App {
 //		laptop.setlId(101);
 //		laptop.setlName("Dell");
 //		student.getLaptop().add(laptop);
+		
+		Student student=new Student();   //Many to Many
+		Laptop laptop=new Laptop();
+		student.setsId(3);
+		student.setsName("zian");
+
+		laptop.setlId(102);
+		laptop.setlName("HP");
+		student.getLaptop().add(laptop);
+		
+		
 
 
 		
@@ -61,7 +63,7 @@ SessionFactory factory=configuration.buildSessionFactory();
 Session session=factory.openSession();
 Transaction transaction=session.beginTransaction();
 
-session.save(student);
+//session.save(student);
 session.save(laptop);
 transaction.commit();
 
