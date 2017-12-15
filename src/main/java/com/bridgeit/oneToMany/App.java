@@ -21,7 +21,7 @@ public class App {
 	
 
 		Phone phone1 = new Phone("S3", "Galaxy");
-		Phone phone2 = new Phone("V3", "Viv0");
+		Phone phone2 = new Phone("S8", "series");
 
 		phone1.setBrand(brand);
 		phone2.setBrand(brand);

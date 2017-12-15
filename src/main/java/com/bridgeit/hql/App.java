@@ -34,22 +34,34 @@ public class App {
 //		System.out.println(employee);
 //		}
 		
-//		Query query=session.createQuery("select name,salary from Employee where id=7");
-//		Object[] employe=(Object[]) query.uniqueResult();
+		Query query=session.createQuery("select name from Employee where id=21");
+		String name=(String) query.uniqueResult();
+	
+			System.out.print(name);
+
+			
+//		Query query=session.createQuery("select name,salary from Employee");
+//		List<Object[]> employe=(List<Object[]>) query.list();
+//		
+//	for(Object[] emp:employe) {
+//			System.out.println(emp[0]+" : "+emp[1]);
+//	}
 //	
-//			System.out.print(employe[0]+" "+employe[1]);
-//
-			
-		Query query=session.createQuery("select name,salary from Employee");
-		List<Object[]> employe=(List<Object[]>) query.list();
-		
-	for(Object[] emp:employe) {
-			System.out.println(emp[0]+" : "+emp[1]);
-	}
-			
+//	query=session.createQuery("delete from Employee where id=19");
+//	int i=query.executeUpdate();
+//	if(i>0) {
+//		System.out.println("id = 19 deleted...");
+//	}
+//	
+//	 query=session.createQuery("select name,salary from Employee");
+//	List<Object[]> employee=(List<Object[]>) query.list();
+//	
+//for(Object[] emp:employee) {
+//		System.out.println(emp[0]+" : "+emp[1]);
+//}
 		transaction.commit();
 		
-
+		
 	}
 
 }

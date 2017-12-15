@@ -42,16 +42,16 @@ public class Laptop {
 //		this.student = student;
 //	}
 	
-	@ManyToMany(mappedBy="laptop")
-	private List<Student> student=new ArrayList<Student>();
-
-	public List<Student> getStudent() {
-		return student;
-	}
-
-	public void setStudent(List<Student> student) {
-		this.student = student;
-	}
+//	@ManyToMany(mappedBy="laptop")
+//	private List<Student> student=new ArrayList<Student>();
+//
+//	public List<Student> getStudent() {
+//		return student;
+//	}
+//
+//	public void setStudent(List<Student> student) {
+//		this.student = student;
+//	}
 	
 	
 }

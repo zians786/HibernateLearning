@@ -10,6 +10,14 @@ import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 @Entity
 public class Books {
+
+	
+@Id
+@GeneratedValue
+private int bId;
+private String title;
+
+	
 	
 public Books(String title) {
 		super();
@@ -27,16 +35,6 @@ public int getbId() {
 	public void setTitle(String title) {
 		this.title = title;
 	}
-	public List<Teacher> getTeacher() {
-		return teacher;
-	}
-	@ManyToMany(cascade=CascadeType.ALL)
-	public void setTeacher(List<Teacher> teacher) {
-		this.teacher = teacher;
-	}
-@Id
-@GeneratedValue
-private int bId;
-private String title;
-private List<Teacher> teacher =new ArrayList<>();
+	
+
 }

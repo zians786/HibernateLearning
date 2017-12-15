@@ -33,17 +33,17 @@ public class Student {
 		this.sName = sName;
 	}
 	
-//	@OneToOne
-//	private Laptop laptop;
-//
-//
-//	public Laptop getLaptop() {
-//		return laptop;
-//	}
-//
-//	public void setLaptop(Laptop laptop) {
-//		this.laptop = laptop;
-//	}
+	@OneToOne
+	private Laptop laptop;
+
+
+	public Laptop getLaptop() {
+		return laptop;
+	}
+
+	public void setLaptop(Laptop laptop) {
+		this.laptop = laptop;
+	}
 
 	
 
@@ -60,17 +60,17 @@ public class Student {
 //		this.laptop = laptop;
 //	}
 
-	@ManyToMany()
-	private List<Laptop> laptop=new ArrayList<Laptop>();
-
-
-	public List<Laptop> getLaptop() {
-		return laptop;
-	}
-
-	public void setLaptop(List<Laptop> laptop) {
-		this.laptop = laptop;
-	}
-
+//	@ManyToMany()
+//	private List<Laptop> laptop=new ArrayList<Laptop>();
+//
+//
+//	public List<Laptop> getLaptop() {
+//		return laptop;
+//	}
+//
+//	public void setLaptop(List<Laptop> laptop) {
+//		this.laptop = laptop;
+//	}
+//
 	
 }

@@ -1,7 +1,9 @@
 package com.bridgeit.manyToMany;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
@@ -16,29 +18,31 @@ public class Teacher {
 	@Id
 	@GeneratedValue
 	private int tId;
-	private String name;
+	private String tName;
 	
 	
-	@ManyToMany(cascade= CascadeType.ALL,mappedBy="teacher")
-	private List<Teacher> teacher=new ArrayList<>();
-	public int gettId() {
-		return tId;
+	@ManyToMany(cascade=CascadeType.ALL)
+	private Set<Books> book=new HashSet<>();
+	
+	public String gettName() {
+		return tName;
 	}
-	public void settId(int tId) {
-		this.tId = tId;
+	public void settName(String tName) {
+		this.tName = tName;
 	}
-	public String getName() {
-		return name;
+	public Set<Books> getBook() {
+		return book;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setBook(Set<Books> book) {
+		this.book = book;
 	}
-	public List<Teacher> getTeacher() {
-		return teacher;
+	public Teacher(String tName, Set<Books> book) {
+		super();
+		this.tName = tName;
+		this.book = book;
 	}
-	public void setTeacher(List<Teacher> teacher) {
-		this.teacher = teacher;
-	}
+	
+	
 	
 
 }

@@ -1,7 +1,9 @@
 package com.bridgeit.manyToMany;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -20,7 +22,18 @@ public class App {
 		Session session = factory.openSession();
 		Transaction transaction = session.beginTransaction();
 	
-		Teacher teacher=new Teacher();
+		Set<Books> book=new HashSet<>();
+		book.add(new Books("Spring"));
+		book.add(new Books("Hibernate"));
+		
+		Teacher teacher=new Teacher("khan", book);
+		Teacher teacher2=new Teacher("Ansari", book);
+		
+		session.save(teacher);
+		session.save(teacher2);
+		
+		transaction.commit();
+	
 		
 	
 		
